@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var conversionCount: Int = 0;
+    var conversionCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,11 +30,15 @@ class ViewController: UIViewController {
                 if let num = Double(result) {
                     let output = num * (9/5) + 32
                     resultLabel.text = String(output)
-                    conversionCount += 1;
-                    conversionLabel.text = String(conversionCount) + " conversions"
+                    incrAndUpdateCount()
                 }
             }
         }
+    }
+    
+    func incrAndUpdateCount() {
+        conversionCount += 1;
+        conversionLabel.text = String(conversionCount) + " conversions"
     }
     
     override func didReceiveMemoryWarning() {
