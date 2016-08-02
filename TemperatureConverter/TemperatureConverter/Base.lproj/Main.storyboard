@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YzI-xD-ggL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Celsius" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YzI-xD-ggL">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="vtc-Ln-eVF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI3-1u-DTk">
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
@@ -32,12 +32,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bii-rv-1Y0">
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Convert to F">
+                                <state key="normal" title="Convert to Fahrenheit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="convertClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFR-Hu-ZfE"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90532852564102562" green="0.45536754749080072" blue="0.0025706615410717548" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90532852564102562" green="0.37042571801294633" blue="0.051220031777371888" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eI3-1u-DTk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A1h-hh-cMB"/>
                             <constraint firstItem="eI3-1u-DTk" firstAttribute="top" secondItem="Bii-rv-1Y0" secondAttribute="bottom" constant="20" id="Hgo-jT-Bek"/>
@@ -47,6 +50,10 @@
                             <constraint firstItem="Bii-rv-1Y0" firstAttribute="top" secondItem="YzI-xD-ggL" secondAttribute="bottom" constant="20" id="vAD-BL-7wn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="eI3-1u-DTk" id="y9z-j8-BS2"/>
+                        <outlet property="tempEntry" destination="YzI-xD-ggL" id="IXq-8z-ZCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
