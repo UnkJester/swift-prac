@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var conversionCount: Int = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var conversionLabel: UILabel!
     @IBOutlet weak var tempEntry: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBAction func convertClicked(_ sender: AnyObject) {
@@ -29,6 +30,8 @@ class ViewController: UIViewController {
                 if let num = Double(result) {
                     let output = num * (9/5) + 32
                     resultLabel.text = String(output)
+                    conversionCount += 1;
+                    conversionLabel.text = String(conversionCount) + " conversions"
                 }
             }
         }
