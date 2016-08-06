@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     var currentOperation: Operator = Operator.nothing
     var calcState: CalculationState = CalculationState.newNumStarted
     var enabledButton: UIButton! = nil
-    var appBackgroundColor: UIColor = UIColor.white()
-    
     var firstValue: String = ""
     
     @IBOutlet weak var resultLabel: UILabel!
@@ -60,12 +58,12 @@ class ViewController: UIViewController {
         setDisabledButton()
         enabledButton = button
         if enabledButton != nil {
-            enabledButton.backgroundColor = UIColor.darkGray()
+            enabledButton.backgroundColor = UIColor.yellow()
         }
     }
     func setDisabledButton() {
         if enabledButton != nil {
-            enabledButton.backgroundColor = appBackgroundColor
+            enabledButton.backgroundColor = UIColor.clear()
             enabledButton = nil
         }
     }
