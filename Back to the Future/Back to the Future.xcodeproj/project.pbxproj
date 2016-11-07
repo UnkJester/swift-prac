@@ -13,6 +13,7 @@
 		8849182B1D60D2790014E374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884918291D60D2790014E374 /* Main.storyboard */; };
 		8849182D1D60D2790014E374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8849182C1D60D2790014E374 /* Assets.xcassets */; };
 		884918301D60D2790014E374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8849182E1D60D2790014E374 /* LaunchScreen.storyboard */; };
+		88FA2B991DD00B2400F61337 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA2B981DD00B2400F61337 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8849182C1D60D2790014E374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8849182F1D60D2790014E374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		884918311D60D2790014E374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FA2B981DD00B2400F61337 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				884918231D60D2790014E374 /* AppDelegate.swift */,
 				884918251D60D2790014E374 /* FirstViewController.swift */,
 				884918271D60D2790014E374 /* SecondViewController.swift */,
+				88FA2B981DD00B2400F61337 /* Utilities.swift */,
 				884918291D60D2790014E374 /* Main.storyboard */,
 				8849182C1D60D2790014E374 /* Assets.xcassets */,
 				8849182E1D60D2790014E374 /* LaunchScreen.storyboard */,
@@ -94,7 +97,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Jesse;
 				TargetAttributes = {
 					8849181F1D60D2790014E374 = {
@@ -143,6 +146,7 @@
 			files = (
 				884918281D60D2790014E374 /* SecondViewController.swift in Sources */,
 				884918241D60D2790014E374 /* AppDelegate.swift in Sources */,
+				88FA2B991DD00B2400F61337 /* Utilities.swift in Sources */,
 				884918261D60D2790014E374 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,8 +188,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -232,8 +238,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -301,6 +309,7 @@
 				884918361D60D2790014E374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
