@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Where_Was_I" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MH0-TN-pSP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0l-YL-hAR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Where Was I?" id="2a1-fa-Gcj">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Spc-If-oFc">
+                                            <connections>
+                                                <action selector="SaveButtonClicked:" destination="BYZ-38-t0r" id="YMF-AQ-Mg1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MH0-TN-pSP" secondAttribute="bottom" id="7Cz-Bn-KWJ"/>
+                            <constraint firstAttribute="trailing" secondItem="MH0-TN-pSP" secondAttribute="trailing" id="M47-Qg-V5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="A0l-YL-hAR" secondAttribute="trailing" id="eSr-nZ-11V"/>
+                            <constraint firstItem="MH0-TN-pSP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gTL-pf-2Jn"/>
+                            <constraint firstItem="MH0-TN-pSP" firstAttribute="top" secondItem="A0l-YL-hAR" secondAttribute="bottom" id="mdN-zH-a8r"/>
+                            <constraint firstItem="A0l-YL-hAR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rqM-zP-xhP"/>
+                            <constraint firstItem="A0l-YL-hAR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w3r-8K-qSV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="MH0-TN-pSP" id="uJ9-oq-V9E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>

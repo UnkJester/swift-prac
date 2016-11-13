@@ -35,10 +35,14 @@ class FirstViewController: UIViewController {
     func Tick() {
         timeLabel.text = Utilities().getCurrentTime()
         
-        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.view.alpha = 0.5
         }) { (true) in
-            self.view.alpha = 1.0;
+            // self.view.alpha = 1.0;
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+                self.view.alpha = 1.0
+            }, completion: { (true) in
+            })
             
         }
     }
